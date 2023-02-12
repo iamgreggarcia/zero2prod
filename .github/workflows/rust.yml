@@ -23,17 +23,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@stable
-      - run: cargo test --all-features
-  
-  fmt:
-    name: Rustfmt
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: stable
           components: rustfmt
+      - run: cargo test --all-features
       - run: fmt --check
-          
           
