@@ -32,8 +32,7 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: rustfmt
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - run: cargo fmt -- --check -verbose
+      - run: cargo fmt -- --check
       
           
   clippy:
